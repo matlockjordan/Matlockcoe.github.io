@@ -1,0 +1,44 @@
+
+:root{--max:1100px;--radius:12px;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#111}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 1rem}
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;text-decoration:none}
+.logo span{font-weight:600;opacity:.8}
+.nav{display:flex;gap:1rem}
+.nav a{text-decoration:none;opacity:.8}
+.nav a:hover{opacity:1}
+.nav-toggle{display:none;background:none;border:none;font-size:1.5rem}
+@media (max-width:800px){
+  .nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid #eee;flex-direction:column;padding:1rem}
+  .nav.open{display:flex}
+  .nav-toggle{display:block}
+}
+.content{min-height:60vh}
+.site-footer{border-top:1px solid #eee;margin-top:3rem}
+.site-footer .container{padding:2rem 1rem;text-align:center;opacity:.8;font-size:.95rem}
+.hero{padding:4rem 0;background:linear-gradient(180deg,#f7f7fb, #fff)}
+.hero h1{font-size:2.4rem;line-height:1.2;margin:0 0 .75rem}
+.hero p{font-size:1.1rem;max-width:60ch}
+.cta-row{margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;background:#111;color:#fff;text-decoration:none}
+.btn-secondary{background:#ededf5;color:#111}
+.split{padding:2.5rem 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+.card{border:1px solid #eee;border-radius:var(--radius);padding:1rem;background:#fff}
+.cards{padding:2.5rem 0;background:#fafafa;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:900px){.card-grid{grid-template-columns:1fr}}
+.arrow-link{text-decoration:none}
+.page-header{padding:3rem 0;background:#fafafa;border-bottom:1px solid #eee}
+.prose{max-width:75ch}
+.prose h2{margin-top:1.5rem}
+.checklist{padding-left:1.25rem}
+.contact-form{display:grid;gap:.6rem}
+input,textarea{width:100%;padding:.7rem;border:1px solid #ddd;border-radius:10px}
+label{font-weight:600}
+.hint{opacity:.7;font-size:.9rem}
